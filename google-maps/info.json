@@ -1,0 +1,109 @@
+{
+  "name": "google-maps",
+  "version": "1.0.0",
+  "label": "Google Maps",
+  "category": "Utilities",
+  "description": "Google Maps is use for the process of converting addresses into geographic coordinates, which you can use to place markers on a map, or position the map.",
+  "publisher": "Community",
+  "cs_approved": false,
+  "cs_compatible": true,
+  "help_online": "",
+  "icon_small_name": "",
+  "icon_large_name": "",
+  "ingestion_supported": false,
+  "configuration": {
+    "fields": [
+      {
+        "title": "Server URL",
+        "name": "server_url",
+        "description": "URL of the Google Maps endpoint server to which you will connect to in order to perform automated operations.",
+        "type": "text",
+        "visible": true,
+        "editable": true,
+        "required": true,
+        "value": "https://maps.googleapis.com"
+      },
+      {
+        "title": "API Key",
+        "name": "api_key",
+        "description": "API key that is configured for your account for using the Google Maps APIs.",
+        "type": "password",
+        "visible": true,
+        "editable": true,
+        "required": true
+      },
+      {
+        "title": "Verify SSL",
+        "name": "verify_ssl",
+        "description": "Specifies whether the SSL certificate for the server is to be verified or not. By default, this option is set as True.",
+        "type": "checkbox",
+        "required": false,
+        "editable": true,
+        "visible": true,
+        "value": true
+      }
+    ]
+  },
+  "operations": [
+    {
+      "operation": "get_maps_geocode",
+      "category": "investigation",
+      "annotation": "get_maps_geocode",
+      "description": "Retrieves a coordinates of the given physical address from Google Maps.",
+      "title": "Get Maps Geocode",
+      "parameters": [
+        {
+          "title": "Address",
+          "name": "address",
+          "description": "The physical address to be geocoded.",
+          "type": "text",
+          "visible": true,
+          "editable": true,
+          "required": true,
+          "placeholder": "e.g fortinet, pune"
+        }
+      ],
+      "output_schema": {
+        "results": [
+          {
+            "address_components": [
+              {
+                "long_name": "",
+                "short_name": "",
+                "types": [
+                ]
+              }
+            ],
+            "formatted_address": "",
+            "geometry": {
+              "location": {
+                "lat": "",
+                "lng": ""
+              },
+              "location_type": "",
+              "viewport": {
+                "northeast": {
+                  "lat": "",
+                  "lng": ""
+                },
+                "southwest": {
+                  "lat": "",
+                  "lng": ""
+                }
+              }
+            },
+            "place_id": "",
+            "plus_code": {
+              "compound_code": "",
+              "global_code": ""
+            },
+            "types": [
+            ]
+          }
+        ],
+        "status": ""
+      },
+      "enabled": true
+    }
+  ]
+}
