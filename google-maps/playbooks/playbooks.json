@@ -1,0 +1,120 @@
+{
+  "type": "workflow_collections",
+  "data": [
+    {
+      "@type": "WorkflowCollection",
+      "name": "Sample - Google Maps - 1.0.0",
+      "description": null,
+      "visible": true,
+      "image": null,
+      "uuid": "db556a3d-6cb2-46cc-86c8-d0bfd2a372d9",
+      "id": 879,
+      "createUser": "/api/3/people/3451141c-bac6-467c-8d72-85e0fab569ce",
+      "createDate": 1639630772,
+      "modifyUser": "/api/3/people/3451141c-bac6-467c-8d72-85e0fab569ce",
+      "modifyDate": 1639630772,
+      "recordTags": [],
+      "workflows": [
+        {
+          "@type": "Workflow",
+          "triggerLimit": null,
+          "name": "Get Maps Geocode",
+          "aliasName": null,
+          "tag": "#google-maps",
+          "description": "Retrieves a coordinates of the given physical address from Google Maps.",
+          "isActive": false,
+          "singleRecordExecution": false,
+          "remoteExecutableFlag": false,
+          "parameters": [],
+          "synchronous": false,
+          "lastModifyDate": 1639631104,
+          "collection": "/api/3/workflow_collections/db556a3d-6cb2-46cc-86c8-d0bfd2a372d9",
+          "versions": [],
+          "triggerStep": "/api/3/workflow_steps/a44f88ab-16e6-4356-b160-2be4159b5e38",
+          "steps": [
+            {
+              "@type": "WorkflowStep",
+              "name": "Start",
+              "description": null,
+              "arguments": {
+                "route": "dff1772c-e704-4160-893d-668901b86be8",
+                "title": "Google Maps: Get Maps Geocode",
+                "resources": [
+                  "alerts"
+                ],
+                "inputVariables": [],
+                "step_variables": {
+                  "input": {
+                    "params": [],
+                    "records": "{{vars.input.records}}"
+                  }
+                },
+                "executeButtonText": "Execute",
+                "noRecordExecution": true,
+                "singleRecordExecution": false
+              },
+              "status": null,
+              "top": "30",
+              "left": "125",
+              "stepType": "/api/3/workflow_step_types/f414d039-bb0d-4e59-9c39-a8f1e880b18a",
+              "uuid": "a44f88ab-16e6-4356-b160-2be4159b5e38",
+              "id": 23034
+            },
+            {
+              "@type": "WorkflowStep",
+              "name": "Get Maps Geocode",
+              "description": null,
+              "arguments": {
+                "name": "Google Maps",
+                "config": "",
+                "params": {
+                  "address": "fortinet, pune"
+                },
+                "version": "1.0.0",
+                "connector": "google-maps",
+                "operation": "get_maps_geocode",
+                "operationTitle": "Get Maps Geocode",
+                "pickFromTenant": false,
+                "step_variables": []
+              },
+              "status": null,
+              "top": "165",
+              "left": "125",
+              "stepType": "/api/3/workflow_step_types/0bfed618-0316-11e7-93ae-92361f002671",
+              "uuid": "d05a5e34-6dda-403b-aa60-0758e382d012",
+              "id": 23035
+            }
+          ],
+          "routes": [
+            {
+              "@type": "WorkflowRoute",
+              "name": "Start -> Get Maps Geocode",
+              "targetStep": "/api/3/workflow_steps/d05a5e34-6dda-403b-aa60-0758e382d012",
+              "sourceStep": "/api/3/workflow_steps/a44f88ab-16e6-4356-b160-2be4159b5e38",
+              "label": null,
+              "isExecuted": false,
+              "uuid": "988fd0be-fc12-458c-ae6a-7c2575bd1713"
+            }
+          ],
+          "priority": "/api/3/picklists/2b563c61-ae2c-41c0-a85a-c9709585e3f2",
+          "uuid": "efece35f-5410-4ea9-b8da-77672e7273fa",
+          "recordTags": [
+            "Google",
+            "google-maps"
+          ],
+          "id": 8059,
+          "createUser": "/api/3/people/3451141c-bac6-467c-8d72-85e0fab569ce",
+          "createDate": 1639630816,
+          "modifyUser": "/api/3/people/3451141c-bac6-467c-8d72-85e0fab569ce",
+          "modifyDate": 1639631104,
+          "owners": [],
+          "isPrivate": false
+        }
+      ]
+    }
+  ],
+  "exported_tags": [
+    "Google",
+    "google-maps"
+  ]
+}
