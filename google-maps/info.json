@@ -7,7 +7,7 @@
   "publisher": "Community",
   "cs_approved": false,
   "cs_compatible": true,
-  "help_online": "",
+  "help_online": "https://docs.fortinet.com/document/fortisoar/1.0.0/google-maps/224/google-maps-v1-0-0",
   "icon_small_name": "small.png",
   "icon_large_name": "large.png",
   "ingestion_supported": false,
@@ -16,7 +16,7 @@
       {
         "title": "Server URL",
         "name": "server_url",
-        "description": "URL of the Google Maps endpoint server to which you will connect to in order to perform automated operations.",
+        "description": "The URL of the Google Maps endpoint server to which you will connect to and perform automated operations.",
         "type": "text",
         "visible": true,
         "editable": true,
@@ -49,13 +49,13 @@
       "operation": "get_maps_geocode",
       "category": "investigation",
       "annotation": "get_maps_geocode",
-      "description": "Retrieves a coordinates of the given physical address from Google Maps.",
+      "description": "Retrieves the coordinates of the specified physical address from Google Maps.",
       "title": "Get Maps Geocode",
       "parameters": [
         {
           "title": "Address",
           "name": "address",
-          "description": "The physical address to be geocoded.",
+          "description": "The physical address whose coordinates you want to retrieve from Google Maps.",
           "type": "text",
           "visible": true,
           "editable": true,
